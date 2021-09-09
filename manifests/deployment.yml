@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: adityapipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: adityapipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: adityapipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: adityapipelinesjavascriptdocker 
+          image: helloworld2134.azurecr.io/adityapipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
